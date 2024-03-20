@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<psalm
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://getpsalm.org/schema/config"
+        xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        reportMixedIssues="false"
+        useDocblockTypes="true"
+        phpVersion="8.1"
+        errorLevel="3"
+        rememberPropertyAssignmentsAfterCall="true"
+        allowStringToStandInForClass="true"
+        memoizeMethodCallResults="true"
+        checkForThrowsDocblock="true"
+        findUnusedVariablesAndParams="true"
+        findUnusedCode="true"
+        findUnusedPsalmSuppress="true"
+        findUnusedBaselineEntry="true"
+>
+    <projectFiles xmlns="https://getpsalm.org/schema/config">
+        <directory name="lib" />
+        <file name="parser.php" />
+    </projectFiles>
+    <issueHandlers>
+        <UndefinedDocblockClass>
+            <errorLevel type="suppress">
+                <referencedClass name="UnitEnum" />
+            </errorLevel>
+        </UndefinedDocblockClass>
+    </issueHandlers>
+</psalm>

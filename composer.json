@@ -1,0 +1,23 @@
+{
+  "name": "alena-mokhova/file-parser",
+  "description": "FileParser for GitHub demonstration",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Alena Mokhova"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.1.0"
+    }
+  },
+  "autoload": {
+    "classmap": ["lib"]
+  },
+  "require-dev": {
+    "vimeo/psalm": "^5.23",
+    "overtrue/phplint": "^9.1"
+  }
+}

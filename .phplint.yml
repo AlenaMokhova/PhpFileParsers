@@ -1,0 +1,13 @@
+path:
+  - lib/
+jobs: 10
+extensions:
+  - php
+exclude:
+  - vendor
+  - upload
+warning: true
+memory-limit: -1
+no-cache: false
+log-json: false
+log-junit: false

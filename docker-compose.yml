@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    tty: true
+    container_name: fileparser
+    command: tail -f /dev/null
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./:/app:rw,consistent
+    networks:
+      - "internal-network"
+
+networks:
+  internal-network:
+    driver: bridge
+
